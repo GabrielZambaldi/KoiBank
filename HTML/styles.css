@@ -1,0 +1,16 @@
+body {
+    font-family: 'Gill Sans', sans-serif;
+    background-color: #020202;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #db6666;
+}
+h2 {
+    color:rgb(135, 172, 172)
+}
+p {
+    color: #cec9c9;
+}
