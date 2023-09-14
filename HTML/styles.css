@@ -1,16 +1,111 @@
 body {
     font-family: 'Gill Sans', sans-serif;
-    background-color: #020202;
+    background-color: black;
     margin: 0;
     padding: 0;
 }
 
+#título {
+    text-align: center;
+    color: white;
+    background-color: red;
+    font-size: 60px; 
+    padding: 0;
+    width: auto;
+}
+
+#acessar {
+    text-align: right;
+    background-color: red;
+}
+
+#botão-acessar {
+    text-align: right;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
 h1 {
-    color: #db6666;
+    color: white;
+    background-color: red;
+    text-align: center;
+    font-size: 60px;
 }
+
+#logo {
+    text-align: center;
+    
+}
+
+#texto1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#botão-abrir-conta {
+    text-align: center;
+}
+
+#abrir-conta {
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 5px;
+    width: 210px;
+}
+
+#conta-digital {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#conta {
+    font-size: 30px;
+}
+
+#baixar-app {
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 5px;
+    width: 210px;
+}
+
+#app {
+    border-radius: 30px;
+}
+
+#cartão-crédito {
+   color: white; 
+   text-align: center;
+   font-weight: bold;
+}
+
+#cartão {
+    font-size: 30px;
+}
+
+#peça-já {
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 5px;
+    width: 210px; 
+}
+
 h2 {
-    color:rgb(135, 172, 172)
+    color:rgb(255, 255, 255)
 }
+
 p {
     color: #cec9c9;
 }
