@@ -153,19 +153,17 @@ main {
 #logo2 {
     text-align: center;
     width: 50vw;
-    
 }
 
 #formulário {
     
-    display: inline-block;
+    display: 1;
     background-color: white;
     color: rgb(90, 90, 90);
     font-weight: bold;
     font-size: 20px;
     padding: 25px;
     width: 50vw;
-   
 }
 
 #enviar {
@@ -182,12 +180,4 @@ main {
     text-align: center;
     color: black;
     background-color: white;
-}
-
-#botaohome{
-    text-align: right;
-    padding: 12px;
-    font-size: 12px;
-    font-weight: bold;
-    margin-top: -5px;
 }
