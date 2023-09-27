@@ -1,16 +1,193 @@
 body {
     font-family: 'Gill Sans', sans-serif;
-    background-color: #020202;
+    background-color: black;
     margin: 0;
     padding: 0;
 }
 
+#título {
+    text-align: center;
+    color: white;
+    background-color: red;
+    font-size: 60px; 
+    padding: 0;
+    width: auto;
+}
+
+#acessar {
+    text-align: right;
+    background-color: red;
+}
+
+#botão-acessar {
+    text-align: right;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
 h1 {
-    color: #db6666;
+    color: white;
+    background-color: red;
+    text-align: center;
+    font-size: 60px;
 }
-h2 {
-    color:rgb(135, 172, 172)
+
+#logo1 {
+    text-align: center;
+    
 }
-p {
-    color: #cec9c9;
+
+#texto1 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+#botão-abrir-conta {
+    text-align: center;
+}
+
+#abrir-conta {
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    border-color: white;
+    padding: 5px;
+    width: 210px;
+    
+}
+
+#conta-digital {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#conta {
+    color: white;
+    font-size: 25px;
+}
+
+#baixar-app {
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    border-color: white;
+    padding: 5px;
+    width: 210px;
+}
+
+#app {
+    border-radius: 35px;
+}
+
+#cartão-crédito {
+   background-color: white; 
+   text-align: center;
+   font-weight: bold;
+   padding: 5px;
+}
+
+#credit-card {
+    border-radius: 25px;
+}
+
+#cartão {
+    color: black;
+    font-size: 25px;
+}
+
+#peça-já {
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 5px;
+    width: 210px; 
+}
+
+#rodapé {
+    text-align: center;
+    font-size: 15px;
+}
+
+#links {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#pginicial {
+    background-color: white;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+}
+
+#infos {
+    color: white;
+    font-size: 10px;
+}
+
+#texto2 {
+    color: white;
+    font-size: 40px;
+}
+
+main {
+    display: flex;
+}
+
+#logo2 {
+    text-align: center;
+    width: 50vw;
+    
+}
+
+#formulário {
+    
+    display: inline-block;
+    background-color: white;
+    color: rgb(90, 90, 90);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 25px;
+    width: 50vw;
+   
+}
+
+#enviar {
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 5px;
+    width: 150px;
+}
+
+#equipe {
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+#botaohome{
+    text-align: right;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: -5px;
 }
