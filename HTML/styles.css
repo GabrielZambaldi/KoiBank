@@ -112,6 +112,10 @@ h1 {
     border-radius: 20px;
     padding: 5px;
     width: 210px; 
+} 
+#peça-já a:visited {
+    color: white;
+    
 }
 
 #rodapé {
