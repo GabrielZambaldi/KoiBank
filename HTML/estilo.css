@@ -1,0 +1,71 @@
+/* Reset CSS */
+body {
+    font-family: 'Gill Sans', sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    text-align: center;
+    background-color: red;
+    padding: 15px 0; /* Adicionado espaçamento superior e inferior para melhor visualização */
+}
+
+#título {
+    text-align: center;
+    color: white;
+    background-color: red;
+    font-size: 60px;
+    padding: 0;
+    width: auto;
+}
+
+
+#botaohome  {
+    color: black ;
+    text-align: right;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+#botaohome :visited {
+    color:black
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Estilos para a seção "Equipe" */
+#equipe {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+
+#equipe h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#equipe p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para a seção "Sobre o Projeto" */
+#equipe h2:last-child {
+    margin-top: 20px;
+}
+
+#equipe p:last-child {
+    margin-bottom: 0;
+}

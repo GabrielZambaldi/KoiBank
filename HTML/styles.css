@@ -1,3 +1,4 @@
+/* Reset CSS */
 body {
     font-family: 'Gill Sans', sans-serif;
     background-color: black;
@@ -5,28 +6,53 @@ body {
     padding: 0;
 }
 
+/* Cabeçalho */
+header {
+    text-align: center;
+    background-color: red;
+}
+
 #título {
     text-align: center;
     color: white;
     background-color: red;
-    font-size: 60px; 
+    font-size: 60px;
     padding: 0;
     width: auto;
 }
 
 #acessar {
-    text-align: right;
-    background-color: red;
-}
-
-
-#botão-acessar {
+    color: black ;
     text-align: right;
     padding: 12px;
     font-size: 12px;
     font-weight: bold;
     margin-top: -5px;
 }
+
+#acessar a:visited{  
+    color: black;
+        
+}
+
+#botão-acessar  {
+    color: black ;
+    text-align: right;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+#botão-acessar :visited {
+    color:black
+
+}
+
+a {
+    text-decoration: none;
+}
+
 
 h1 {
     color: white;
@@ -35,9 +61,9 @@ h1 {
     font-size: 60px;
 }
 
+/* Conteúdo */
 #logo1 {
     text-align: center;
-    
 }
 
 #texto1 {
@@ -45,15 +71,17 @@ h1 {
     font-size: 40px;
     color: white;
 }
-#texto1 a:visited {
+
+#texto1  {
     color: white;
     background-color: black;
-
 }
 
-#botão-abrir-conta {
+#botão-abrir-conta  {
     text-align: center;
 }
+
+
 
 #abrir-conta {
     text-align: center;
@@ -64,8 +92,11 @@ h1 {
     border-color: white;
     padding: 5px;
     width: 210px;
-    
 }
+
+#abrir-conta :visited {
+  color: white;
+ }
 
 #conta-digital {
     text-align: center;
@@ -95,10 +126,10 @@ h1 {
 }
 
 #cartão-crédito {
-   background-color: white; 
-   text-align: center;
-   font-weight: bold;
-   padding: 5px;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
 }
 
 #credit-card {
@@ -117,23 +148,28 @@ h1 {
     font-size: 20px;
     border-radius: 20px;
     padding: 5px;
-    width: 210px; 
-} 
-#peça-já a:visited {
-    color: white;
-    
+    width: 210px;
 }
 
+#peça-já :visited  {
+    color: white;
+}
+
+/* Rodapé */
 #rodapé {
     text-align: center;
     font-size: 15px;
 }
 
-#links {
+#links  {
     text-align: center;
     font-weight: bold;
     font-size: 20px;
     background-color: black;
+    color: white;
+}
+
+#links a:visited {
     color: white;
 }
 
@@ -166,8 +202,7 @@ main {
 }
 
 #formulário {
-    
-    display: 1;
+    display: inline;
     background-color: white;
     color: rgb(90, 90, 90);
     font-weight: bold;
@@ -178,16 +213,10 @@ main {
 
 #enviar {
     text-align: center;
-    background-color: red;
-    color: white;
+    background-color: red; /* Exemplo de cor de fundo, você pode substituir pela cor desejada */
+    color: white; /* Cor do texto no botão */
     font-size: 20px;
     border-radius: 20px;
     padding: 5px;
     width: 150px;
-}
-
-#equipe {
-    text-align: center;
-    color: black;
-    background-color: white;
 }
