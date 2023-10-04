@@ -70,3 +70,25 @@ a {
 #equipe p:last-child {
     margin-bottom: 0;
 }
+
+#rodapé {
+    text-align: center;
+    font-size: 15px;
+}
+
+#links  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+#infos {
+    color: white;
+    font-size: 10px;
+}
