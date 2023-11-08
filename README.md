@@ -7,10 +7,14 @@
 ### Lucas Teixeira Alexandre RA 202211299935
 
 # SOBRE O PROJETO:
-Nosso projeto será um banco digital, onde teremos os cadastros de clientes, programas de benefícios, consultoria.
-O projeto será feito utilizando as linguagens padrão: HTML5, CSS e Javascript, além de ser adaptável em qualquer tamanho de tela da web.
-A página inicial é a index.html;
-A página de cadastro do cliente é Abertura_conta.html.
-A página de apresentação dos integrantes do grupo é Koibank.html
-A página de login é a Login.html
-A página principal é a Tema.html
+
+Nosso projeto é um banco digital, onde temos cadastros de clientes, programas de benefícios, consultoria, rendimentos, e investimentos.
+O projeto está sendo feito utilizando as linguagens padrão: HTML5, CSS e Javascript, sendo adaptável para qualquer tela sendo computador, notebook, ou celulares.
+Na pasta index.html se encontra os códigos da página de apresentação do nosso projeto KoiBank;
+
+Dentro da pasta HTML: 
+Temos as página de login onde o cliente entra em sua conta,Login.html 
+Temos também o logo do nosso projeto, 
+Temos a página de abertura de conta onde o cliente faz o seu cadastro e cria a sua conta, Abertura_conta.html
+Temos a página de apresentação dos integrantes do grupo, Koibank.html
+Temos a página principal do projeto acessando através do Tema.html
