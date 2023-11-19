@@ -94,13 +94,24 @@ h1 {
     background-color: black;
 }
 
-#botão-abrir-conta  {
-    text-align: center;
+#botão-abrir-conta a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 25px; /* Borda arredondada */
+    font-weight: bold;
+    font-size: 18px; /* Tamanho da fonte em pixels */
+    border: 2px solid #ffffff; /* Largura, estilo e cor da borda */
+}
+
+#botão-abrir-conta a:hover {
+    background-color: #882121; /* Cor de fundo ao passar o mouse */
 }
 
 
-
-#abrir-conta {
+#abrir-conta a {
     text-align: center;
     background-color: red;
     color: white;
@@ -271,4 +282,19 @@ main {
 .botão-link:hover {
     background-color: #b30000; /* Nova cor de fundo ao passar o mouse */
     border-color: #fdfdfd; /* Nova cor da borda ao passar o mouse */
+}
+
+#botão-acessar a {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #ffffff; /* Cor de fundo do botão */
+    color: #000000; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 1px; /* Borda arredondada */
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#botão-acessar a:hover {
+    background-color: w#0056b3; /* Cor de fundo ao passar o mouse */
 }
