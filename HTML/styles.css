@@ -388,3 +388,19 @@ main {
     background-color: rgb(255, 0, 0); /* Cor de fundo ao passar o mouse */
 }
 
+.inicio {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #ffffff; /* Cor de fundo do botão */
+    color: #000000; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 1px; /* Borda arredondada */
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* Estilo quando o mouse passa por cima do link */
+.inicio:hover {
+    background-color: #ffffff; /* Cor de fundo alterada quando hover */
+}
