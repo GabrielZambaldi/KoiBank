@@ -184,6 +184,16 @@ h1 {
     font-size: 25px;
 }
 
+#cartão2 {
+    color: black;
+    font-size: 25px;
+}
+
+#cartão3 {
+    color: black;
+    font-size: 25px;
+}
+
 #peça-já {
     text-align: center;
     background-color: red;
@@ -215,6 +225,43 @@ h1 {
 #links a:visited {
     color: white;
 }
+
+#links2  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+#links3  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+#links4  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
 
 #pginicial {
     background-color: white;
@@ -307,4 +354,21 @@ main {
 
 #botão-acessar a:hover {
     background-color: w#0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+.botão {
+    display: inline-block;
+    padding: 7px 70px;
+    background-color: #ff0000; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 25px; /* Borda arredondada */
+    font-weight: bold;
+    font-size: 18px; /* Tamanho da fonte em pixels */
+    border: 2px solid #ffffff; /* Largura, estilo e cor da borda */
+}
+
+/* Adicione uma regra de estilo para o estado hover do link */
+.botão:hover {
+    background-color: rgb(255, 0, 0); /* Cor de fundo ao passar o mouse */
 }
