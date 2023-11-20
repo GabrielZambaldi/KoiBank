@@ -92,3 +92,82 @@ a {
     color: white;
     font-size: 10px;
 }
+
+/* Estilos básicos para o link com a classe "homee" */
+.homee {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #ffffff; /* Cor de fundo do botão */
+    color: #000000; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 1px; /* Borda arredondada */
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* Estilo quando o mouse passa por cima do link */
+.homee:hover {
+    background-color: #2980b9; /* Cor de fundo alterada quando hover */
+}
+
+#links  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+#links2  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+#links3  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+#links4  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+
+#links5  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
