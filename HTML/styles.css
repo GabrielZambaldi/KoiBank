@@ -38,10 +38,11 @@ header {
 #botão-acessar  {
     color: black ;
     text-align: right;
-    padding: 12px;
-    font-size: 12px;
+    padding: 10px;
+    font-size: 10px;
     font-weight: bold;
-    margin-top: -5px;
+    margin-top: -1px;
+  
 }
 
 #botão-acessar :visited {
@@ -53,6 +54,21 @@ a {
     color:black;
     text-decoration: none;
 }
+#botão-acessar a {
+    color: black;
+    text-align: right;
+}
+
+#botão-acessar button {
+    padding: 12px 15px; /* Ajuste o valor conforme necessário para aumentar a área clicável */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#botão-acessar a:visited {
+    color: black;
+}
+
 
 
 h1 {
@@ -78,13 +94,24 @@ h1 {
     background-color: black;
 }
 
-#botão-abrir-conta  {
-    text-align: center;
+#botão-abrir-conta a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 25px; /* Borda arredondada */
+    font-weight: bold;
+    font-size: 18px; /* Tamanho da fonte em pixels */
+    border: 2px solid #ffffff; /* Largura, estilo e cor da borda */
+}
+
+#botão-abrir-conta a:hover {
+    background-color: #882121; /* Cor de fundo ao passar o mouse */
 }
 
 
-
-#abrir-conta {
+#abrir-conta a {
     text-align: center;
     background-color: red;
     color: white;
@@ -111,6 +138,16 @@ h1 {
     font-size: 25px;
 }
 
+#conta2 {
+    color: white;
+    font-size: 25px;
+}
+
+#conta3 {
+    color: white;
+    font-size: 25px;
+}
+
 #baixar-app {
     text-align: center;
     background-color: red;
@@ -121,6 +158,11 @@ h1 {
     padding: 5px;
     width: 210px;
 }
+
+#baixar-app :visited  {
+    color: white;
+   }
+
 
 #app {
     border-radius: 35px;
@@ -138,6 +180,16 @@ h1 {
 }
 
 #cartão {
+    color: black;
+    font-size: 25px;
+}
+
+#cartão2 {
+    color: black;
+    font-size: 25px;
+}
+
+#cartão3 {
     color: black;
     font-size: 25px;
 }
@@ -173,6 +225,58 @@ h1 {
 #links a:visited {
     color: white;
 }
+
+#links2  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+#links3  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+#links4  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+
+#links5  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+
+
 
 #pginicial {
     background-color: white;
@@ -227,3 +331,76 @@ main {
       width: 100%;
     }
   }
+
+  /* Adicione um estilo para o link dentro do botão */
+#botão-abrir-conta {
+    text-align: center;
+}
+
+.botão-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #ff0000; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: 1px solid #ffffff; /* Borda do botão */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+
+}
+
+/* Adicione um estilo de hover para o efeito visual quando o mouse passa sobre o botão */
+.botão-link:hover {
+    background-color: #b30000; /* Nova cor de fundo ao passar o mouse */
+    border-color: #fdfdfd; /* Nova cor da borda ao passar o mouse */
+}
+
+#botão-acessar a {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #ffffff; /* Cor de fundo do botão */
+    color: #000000; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 1px; /* Borda arredondada */
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#botão-acessar a:hover {
+    background-color: w#0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+.botão {
+    display: inline-block;
+    padding: 7px 70px;
+    background-color: #ff0000; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 25px; /* Borda arredondada */
+    font-weight: bold;
+    font-size: 18px; /* Tamanho da fonte em pixels */
+    border: 2px solid #ffffff; /* Largura, estilo e cor da borda */
+}
+
+/* Adicione uma regra de estilo para o estado hover do link */
+.botão:hover {
+    background-color: rgb(255, 0, 0); /* Cor de fundo ao passar o mouse */
+}
+
+.inicio {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #ffffff; /* Cor de fundo do botão */
+    color: #000000; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 1px; /* Borda arredondada */
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* Estilo quando o mouse passa por cima do link */
+.inicio:hover {
+    background-color: #ffffff; /* Cor de fundo alterada quando hover */
+}
