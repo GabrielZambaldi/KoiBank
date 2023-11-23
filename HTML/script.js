@@ -3,41 +3,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     formulario.addEventListener('submit', function(event) {
         event.preventDefault();
-        console.log('Evento de envio acionado!');
 
-        // Obter dados do formulário
         const dadosDoFormulario = {
             primeiroNome: document.querySelector('input[name="primeiro nome"]').value,
             ultimoNome: document.querySelector('input[name="último nome"]').value,
             cpf: document.querySelector('input[name="cpf"]').value,
             email: document.querySelector('input[name="email"]').value,
-            // Adicionar outros campos conforme necessário
+            endereco: document.querySelector('input[name="endereço"]').value,
+            bairro: document.querySelector('input[name="bairro"]').value,
+            numero: document.querySelector('input[name="número"]').value,
+            complemento: document.querySelector('input[name="complemento"]').value,
+            cep: document.querySelector('input[name="CEP"]').value,
+            areaCode: document.querySelector('input[name="area code"]').value,
+            phoneNumber: document.querySelector('input[name="phone number"]').value,
+            // Adicione outros campos do formulário conforme necessário
         };
 
-        // Enviar dados para o backend
-        enviarParaBackend(dadosDoFormulario);
+        fetch('https://legendary-trout-66jgqr9wj6rh4jvp-5000.app.github.dev/processar_formulario', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dadosDoFormulario),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Resposta do backend:', data);
+            // Adicione aqui a lógica para lidar com a resposta do back-end, se necessário
+        })
+        .catch(error => {
+            console.error('Erro ao enviar para o backend:', error);
+        });
     });
 });
-
-function enviarParaBackend(dados) {
-    // URL do seu backend
-    const urlBackend = 'https://legendary-trout-66jgqr9wj6rh4jvp-5000.app.github.dev/'; // Substitua pela URL real do seu backend
-
-    // Fazer uma requisição POST usando fetch
-    fetch(urlBackend, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dados),
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Resposta do backend:', data);
-
-        // Adicione lógica para lidar com a resposta do backend, se necessário
-    })
-    .catch(error => {
-        console.error('Erro ao enviar para o backend:', error);
-    });
-}
