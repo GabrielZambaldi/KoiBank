@@ -12,7 +12,7 @@
             KOI BANK
         </div>
         <div id="botão-acessar">
-         <a href="./Tema.html" class="inicio">PÁGINA INICIAL</a>
+            <a href="./Tema.html" class="inicio">PÁGINA INICIAL</a>
         </div>
     </header>
     <main>
@@ -24,32 +24,31 @@
         <div id="formulário">
             <form id="meuformulario">
                 <p>Nome completo *</p>
-                    <input type="text" placeholder="Primeiro nome" name="primeiro nome" required>
-                    <input type="text" placeholder="Último nome" name="último nome" required>
+                <input type="text" placeholder="Primeiro nome" name="primeiroNome" required>
+                <input type="text" placeholder="Último nome" name="ultimoNome" required>
 
                 <p>CPF *</p>
-                    <input type="text" placeholder="123.456.789-00" name="cpf" required>
+                <input type="text" placeholder="123.456.789-00" name="cpf" required>
 
                 <p>E-mail *</p>
-                    <input type="email" placeholder="ex: email@yahoo.com" name="email" required>
+                <input type="email" placeholder="ex: email@yahoo.com" name="email" required>
 
                 <p>Endereço *</p>
-                    <input type="text" placeholder="Rua" name="endereço" required>
-                    <input type="text" placeholder="Bairro" name="bairro" required>
-                    <p>
-                        <input type="text" placeholder="Número" name="número" required>
-                        <input type="text" placeholder="Complemento" name="complemento">
-                    </p>
-                       <input type="text" placeholder="12345-678" name="CEP" required>
+                <input type="text" placeholder="Rua" name="endereco" required>
+                <input type="text" placeholder="Bairro" name="bairro" required>
+                <p>
+                    <input type="text" placeholder="Número" name="numero" required>
+                    <input type="text" placeholder="Complemento" name="complemento">
+                </p>
+                <input type="text" placeholder="12345-678" name="CEP" required>
 
-                <p>Númeto de Telefone *</p>
-                   <input type="text" placeholder="Código internacional" name="area code" required>
-                   <input type="text" placeholder="DDD + Celular" name="phone number" required>
-                    <p>
-                        <input type="submit" id="enviar">
-
-                        
-                    </p>
+                <p>Número de Telefone *</p>
+                <input type="text" placeholder="Código internacional" name="areaCode" required>
+                <input type="text" placeholder="DDD + Celular" name="phoneNumber" required>
+                <p>
+                    <input type="submit" id="enviar">
+                </p>
+            </form>
         </div>
     </main>
 
@@ -79,7 +78,17 @@
                 event.preventDefault();
     
                 const dadosDoFormulario = {
-                    nome: document.querySelector('input[name="primeiro nome"]').value,
+                    primeiroNome: document.querySelector('input[name="primeiroNome"]').value,
+                    ultimoNome: document.querySelector('input[name="ultimoNome"]').value,
+                    cpf: document.querySelector('input[name="cpf"]').value,
+                    email: document.querySelector('input[name="email"]').value,
+                    endereco: document.querySelector('input[name="endereco"]').value,
+                    bairro: document.querySelector('input[name="bairro"]').value,
+                    numero: document.querySelector('input[name="numero"]').value,
+                    complemento: document.querySelector('input[name="complemento"]').value,
+                    CEP: document.querySelector('input[name="CEP"]').value,
+                    areaCode: document.querySelector('input[name="areaCode"]').value,
+                    phoneNumber: document.querySelector('input[name="phoneNumber"]').value,
                     // Adicione outros campos do formulário conforme necessário
                 };
     
@@ -101,7 +110,5 @@
             });
         });
     </script>
-    
-
 </body>
 </html>
