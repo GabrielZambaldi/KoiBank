@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function enviarParaBackend(dados) {
     // URL do seu backend
-    const urlBackend = '/'; // Substitua pelo URL real do seu backend
+    const urlBackend = 'https://legendary-trout-66jgqr9wj6rh4jvp-5000.app.github.dev/'; // Substitua pela URL real do seu backend
 
     // Fazer uma requisição POST usando fetch
     fetch(urlBackend, {
