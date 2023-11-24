@@ -22,8 +22,9 @@
             <p id="texto2">Acesse sua conta</p>
         </div>
 
-        <div id="formulário">
-            <form>
+        <!-- Linha modificada -->
+        <div id="loginn">
+            <form id="meuLogin"> <!-- Adicionado um ID para identificar o formulário de login -->
                 <p>CPF *</p>
                 <input type="text" name="cpf" required>
 
@@ -54,5 +55,46 @@
             <p>Av. Das Carpas, 3186 - Vila Toquio, São Paulo - 13000-000</p>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+
+            // Lógica para processar o formulário de login
+            const formularioLogin = document.getElementById('meuLogin'); // Linha não modificada
+
+            formularioLogin.addEventListener('submit', function(event) { // Linha não modificada
+                event.preventDefault(); // Linha não modificada
+
+                const dadosDoLogin = {
+                    cpf: document.querySelector('input[name="cpf"]').value,
+                    senha: document.querySelector('input[name="senha"]').value,
+                };
+
+                fetch('https://legendary-trout-66jgqr9wj6rh4jvp-5000.app.github.dev/processar_login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(dadosDoLogin),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Resposta do backend (login):', data);
+
+                    if (data.mensagem === 'Login bem-sucedido') {
+                        alert('Login realizado com sucesso!');
+                        // Adicione lógica adicional para o sucesso do login, se necessário
+                    } else {
+                        alert('Credenciais inválidas. Tente novamente.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao enviar para o backend (login):', error);
+                });
+            });
+        });
+    </script>
+    <script src="login.js"></script>
 </body>
 </html>

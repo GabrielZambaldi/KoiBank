@@ -5,17 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
 
         const dadosDoFormulario = {
-            primeiroNome: document.querySelector('input[name="primeiro nome"]').value,
-            ultimoNome: document.querySelector('input[name="último nome"]').value,
+            primeiroNome: document.querySelector('input[name="primeiroNome"]').value,
+            ultimoNome: document.querySelector('input[name="ultimoNome"]').value,
             cpf: document.querySelector('input[name="cpf"]').value,
             email: document.querySelector('input[name="email"]').value,
-            endereco: document.querySelector('input[name="endereço"]').value,
+            endereco: document.querySelector('input[name="endereco"]').value,
             bairro: document.querySelector('input[name="bairro"]').value,
-            numero: document.querySelector('input[name="número"]').value,
+            numero: document.querySelector('input[name="numero"]').value,
             complemento: document.querySelector('input[name="complemento"]').value,
-            cep: document.querySelector('input[name="CEP"]').value,
-            areaCode: document.querySelector('input[name="area code"]').value,
-            phoneNumber: document.querySelector('input[name="phone number"]').value,
+            CEP: document.querySelector('input[name="CEP"]').value,
+            areaCode: document.querySelector('input[name="areaCode"]').value,
+            phoneNumber: document.querySelector('input[name="phoneNumber"]').value,
             // Adicione outros campos do formulário conforme necessário
         };
 
@@ -29,7 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             console.log('Resposta do backend:', data);
-            // Adicione aqui a lógica para lidar com a resposta do back-end, se necessário
+            
+            // Lógica para lidar com a resposta do servidor
+            if (data.mensagem === 'Formulário recebido com sucesso!') {
+                // A operação foi bem-sucedida, você pode redirecionar o usuário para outra página, exibir uma mensagem de sucesso, etc.
+                alert('Cadastro realizado com sucesso!');
+                window.location.href = 'acesso/acesso.html';
+            } else {
+                // A operação falhou, você pode exibir uma mensagem de erro para o usuário ou tomar outras ações apropriadas.
+                alert('Erro ao processar o formulário. Por favor, tente novamente.');
+            }
         })
         .catch(error => {
             console.error('Erro ao enviar para o backend:', error);
