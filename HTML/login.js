@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.mensagem === 'Login bem-sucedido') {
                 alert('Login realizado com sucesso!');
                 // Adicione lógica adicional para o sucesso do login, se necessário
-                window.location.href = 'acesso/acesso.html';
+                window.location.href = '#';
             } else {
                 alert('Credenciais inválidas. Tente novamente.');
             }

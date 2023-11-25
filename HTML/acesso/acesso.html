@@ -1,28 +1,59 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para o arquivo CSS gerado a partir do SCSS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
-    <title>KoiBank</title> <!--titulo do site na aba-->
+    <title>KoiBank</title>
 </head>
 <body>
 
-    <header>
+<header>
+    <div id="primeiro">
         <h1> Bem-vindo de volta</h1> <!--titulo do site-->
-        <p>KoiBank O seu banco digital</p> 
-    </header>
-    <div>
-        <ol>
-            <li><a href="./interno/saldo.html">Saldo da conta</a></li>
-            <li><a href="./interno/deposito.html">Depósito da conta</a></li>
-            <li><a href="./interno/pagamentos.html">Faça pagamentos</a></li>
-            <li><a href="./interno/cartao.html">Cartões da conta</a></li>
-            <li><a href="./interno/seguros.html">Seguros</a></li>
-            <li><a href="./interno/financiamento.html">Financiamentos</a></li>
-        </ol>
-        <p><a href="../Koibank.html">Sair da conta</a></p>
+        <p>KoiBank O seu banco digital</p>
     </div>
+</header>
+
+<main>
+    <div id="acessosinternos">
+        <ol>
+            <li><a id="acessos1" href="#">Saldo da conta</a></li>
+            <li><a id="acesso2"  href="#">Depósito da conta</a></li>
+            <li><a id="acesso3"  href="#">Faça pagamentos</a></li>
+            <li><a id="acesso4"  href="#">Cartões da conta</a></li>
+            <li><a id="acesso5"  href="#">Seguros</a></li>
+            <li><a id="acesso6"  href="#">Financiamentos</a></li>
+        </ol>
+        <p><a id="sair" href="/HTML/Login.html">SAIR DA CONTA</a></p>
+    </div>
+
+    <div id="cartão-crédito">
+       
+        <img id="credit-card" src="./Img/Cartão.jpeg" alt="#">
+        
+        <a id="botao" class="botão">PEÇA JÁ O SEU CARTÃO</a>
+    </div>
+</main> 
+<footer id="rodapé">
+    <div id="links">
+        <p>
+            <a id="links5" href="#">Trabalhe conosco</a>
+            | 
+            <a id="links2" href="/HTML/Koibank.html">Sobre nós</a>
+            | 
+            <a id="links3" href="#" >LGPD</a>
+            |
+            <a id="links4" href="#">Fale conosco</a>
+        </p>
+    </div>
+    <div id="infos">
+        <p>© 2023 BANCO KOI S.A. CNPJ: 00.000.000/0001-00</p>
+        <p>Av. Das Carpas, 3186 - Vila Toquio, São Paulo - 13000-000</p>
+    </div>
+</footer>
+    
+
 </body>
 </html>
- 

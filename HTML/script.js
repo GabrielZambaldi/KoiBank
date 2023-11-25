@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.mensagem === 'Formulário recebido com sucesso!') {
                 // A operação foi bem-sucedida, você pode redirecionar o usuário para outra página, exibir uma mensagem de sucesso, etc.
                 alert('Cadastro realizado com sucesso!');
-                window.location.href = 'acesso/acesso.html';
+                window.location.href = '#';
             } else {
                 // A operação falhou, você pode exibir uma mensagem de erro para o usuário ou tomar outras ações apropriadas.
                 alert('Erro ao processar o formulário. Por favor, tente novamente.');

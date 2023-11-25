@@ -1,0 +1,175 @@
+header {
+    text-align: center;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    padding: 10px;
+}
+
+#título {
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    font-size: 200px;
+    padding: 0;
+    width: auto;
+}
+
+body {
+    font-family: 'Gill Sans', sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+footer {
+    /* Adicione os estilos necessários para o rodapé */
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+#infos {
+    color: white;
+    font-size: 10px;
+}
+
+#rodapé {
+    text-align: center;
+    font-size: 15px;
+}
+
+
+#links  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+#links2  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+#links3  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+#links4  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+
+#links5  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#links a:visited {
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    background-color: white; /* Adicionado o background-color */
+    margin-top: -20px; /* Ajuste conforme necessário para subir a main */
+}
+
+#acessosinternos {
+    width: 48%; /* Ajuste conforme necessário */
+    
+}
+
+#cartão-crédito {
+    width: 48%; /* Ajuste conforme necessário */
+}
+
+#sair {
+    text-align: center;
+    margin-top: 325px; /* Ajuste conforme necessário para a posição desejada */
+    padding: 10px; /* Adicione algum preenchimento para melhorar a aparência */
+    background-color: #ffffff; /* Adicione um fundo para destacar o link */
+    display: block; /* Certifique-se de que o link ocupa toda a largura disponível */
+    color: black; 
+    text-decoration: none;
+}
+
+#acessos1 {
+    text-decoration: none;
+    color: black;
+}
+
+#acesso2 {
+    text-decoration: none;
+    color: black;
+}
+
+#acesso3 {
+    text-decoration: none;
+    color: black;
+}
+
+#acesso4 {
+    text-decoration: none;
+    color: black;
+}
+
+#acesso5 {
+    text-decoration: none;
+    color: black;
+}
+
+#acesso6 {
+    text-decoration: none;
+    color: black;
+}
+
+#botao {
+    text-align: center;
+    margin-top: 30px; /* Ajuste conforme necessário para a posição desejada */
+    padding: 10px; /* Adicione algum preenchimento para melhorar a aparência */
+    background-color: #ffffff; /* Adicione um fundo para destacar o link */
+    display: block; /* Certifique-se de que o link ocupa toda a largura disponível */
+    color: black; 
+    text-decoration: none;
+}
+
+
