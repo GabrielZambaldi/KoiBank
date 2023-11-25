@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Adicione outros campos do formulário conforme necessário
         };
 
-        fetch('https://legendary-trout-66jgqr9wj6rh4jvp-5000.app.github.dev/processar_formulario', {
+        fetch('http://127.0.0.1:5000/processar_formulario', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.mensagem === 'Formulário recebido com sucesso!') {
                 // A operação foi bem-sucedida, você pode redirecionar o usuário para outra página, exibir uma mensagem de sucesso, etc.
                 alert('Cadastro realizado com sucesso!');
-                window.location.href = '#';
+                window.location.href = './acesso/acesso.html';
             } else {
                 // A operação falhou, você pode exibir uma mensagem de erro para o usuário ou tomar outras ações apropriadas.
                 alert('Erro ao processar o formulário. Por favor, tente novamente.');

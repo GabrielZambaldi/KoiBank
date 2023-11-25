@@ -3,18 +3,8 @@ header {
   text-align: center;
   background-color: rgb(255, 0, 0);
   color: white;
-  font-size: 20px;
-  margin: 0;
-  padding: 10px;
-}
-
-#título {
-  text-align: center;
-  color: white;
-  background-color: rgb(255, 0, 0);
-  font-size: 200px;
-  padding: 0;
-  width: auto;
+  font-size: 2.9em;
+  margin-top: -30px; /* Ajuste conforme necessário */
 }
 
 body {
@@ -104,25 +94,27 @@ footer {
 
 main {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: white; /* Adicionado o background-color */
   margin-top: -20px; /* Ajuste conforme necessário para subir a main */
 }
 
-#acessosinternos {
-  width: 48%; /* Ajuste conforme necessário */
+#credit-card {
+  width: 100%; /* Ajuste conforme necessário */
+  height: auto; /* Isso garante que a proporção original da imagem seja mantida */
 }
 
-#cartão-crédito {
-  width: 48%; /* Ajuste conforme necessário */
+#acessosinternos, #cartão-crédito {
+  width: 40%;
+  box-sizing: border-box;
+}
+
+#sair, #botao {
+  margin-top: 2em;
 }
 
 #sair {
-  text-align: center;
-  margin-top: 325px; /* Ajuste conforme necessário para a posição desejada */
-  padding: 10px; /* Adicione algum preenchimento para melhorar a aparência */
-  background-color: #ffffff; /* Adicione um fundo para destacar o link */
-  display: block; /* Certifique-se de que o link ocupa toda a largura disponível */
   color: black;
   text-decoration: none;
 }
@@ -165,6 +157,31 @@ main {
   display: block; /* Certifique-se de que o link ocupa toda a largura disponível */
   color: black;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #acessosinternos, #cartão-crédito {
+    width: 100%; /* Em telas menores, faça os elementos ocuparem toda a largura disponível */
+    margin-bottom: 1em; /* Adicione uma margem inferior entre os elementos */
+  }
+  #sair, #botao {
+    margin-top: 1em; /* Reduza a margem superior para telas menores */
+  }
+}
+css Copy code body {
+  font-size: 16px; /* Defina um tamanho de fonte padrão no corpo do documento */
+}
+
+header {
+  font-size: 1.25em; /* 1.25 vezes o tamanho padrão do corpo */
+}
+
+#título {
+  font-size: 3em; /* 3 vezes o tamanho padrão do corpo */
+}
+
+footer {
+  font-size: 0.75em; /* 0.75 vezes o tamanho padrão do corpo */
 }
 
 /*# sourceMappingURL=style.css.map */
