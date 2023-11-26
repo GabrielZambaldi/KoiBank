@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             senha: document.querySelector('input[name="senha"]').value,
         };
 
-        fetch('http://127.0.0.1:5000/login', {
+        fetch('http://127.0.0.1:5004/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const idUsuario = data.id_usuario;
 
                 // Exemplo de uma requisição para obter mensagens personalizadas
-                fetch(`http://127.0.0.1:5000/mensagens/${idUsuario}`)
+                fetch(`http://127.0.0.1:5004/mensagens/${idUsuario}`)
                     .then(response => response.json())
                     .then(data => {
                         if ('mensagem_personalizada' in data) {

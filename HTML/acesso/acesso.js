@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function excluirConta() {
         // Faça uma solicitação para a API ou execute a lógica de exclusão aqui
         // Exemplo usando fetch para a rota de exclusão no servidor
-        fetch('http://127.0.0.1:5000/excluir_conta', {
+        fetch('http://127.0.0.1:5004/excluir_conta', {
     method: 'DELETE',
     headers: {
         'Content-Type': 'application/json',
@@ -37,3 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+

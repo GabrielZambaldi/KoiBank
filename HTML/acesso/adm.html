@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/HTML/acesso/adm.css">
+    <title>Admin</title>
+</head>
+
+<body>
+    <header>
+        <div id="título">
+            KOI BANK - ADMIN
+        </div>
+        <div id="botão-acessar">
+            <a href="../Login.html" class="botão">PÁGINA INICIAL</a>
+        </div>
+    </header>
+
+    <main>
+      <div id="crud-usuarios">
+          <h2>Gerenciamento de Usuários</h2>
+          <div class="botoes">
+              <button onclick="listarUsuarios()">Listar Usuários</button>
+              <button onclick="criarUsuario()">Criar Usuário</button>
+              
+              
+          </div>
+          <div id="mensagem"></div> <!-- Adicione esta linha -->
+          <div id="resultado">
+          
+
+              
+          </div>
+      </div>
+  </main>
+    
+
+    <footer id="rodapé">
+        <div id="links">
+            <p>
+                <a id="links5">Trabalhe conosco</a>
+                |
+                <a id="links2" href="./Koibank.html">Sobre nós</a>
+                |
+                <a id="links3">LGPD</a>
+                |
+                <a id="links4">Fale conosco</a>
+            </p>
+        </div>
+        <div id="infos">
+            <p>© 2023 BANCO KOI S.A. CNPJ: 00.000.000/0001-00</p>
+            <p>Av. Das Carpas, 3186 - Vila Toquio, São Paulo - 13000-000</p>
+        </div>
+    </footer>
+
+    <script src="/HTML/acesso/adm.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const tabelaUsuarios = document.createElement('table');
+    tabelaUsuarios.innerHTML = `
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-usuarios"></tbody>
+    `;
+
+    document.getElementById('resultado').appendChild(tabelaUsuarios);
+});
+
+// Função para exibir mensagens
+function exibirMensagem(mensagem) {
+    const mensagemElemento = document.getElementById('mensagem');
+    mensagemElemento.innerHTML = `<p>${mensagem}</p>`;
+}
+
+// Função para listar usuários
+async function listarUsuarios() {
+    const response = await fetch('http://127.0.0.1:5004/api/usuarios');
+    const data = await response.json();
+
+    // Criação da tabela
+    const tabela = document.createElement('table');
+    tabela.innerHTML = `
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-usuarios"></tbody>
+    `;
+
+    // Preenchimento da tabela com os dados
+    const tbody = tabela.querySelector('#tabela-usuarios');
+    data.forEach(usuario => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+        <td>${usuario.id}</td>
+        <td>${usuario.primeiro_nome}</td>
+        <td>${usuario.ultimo_nome}</td>
+        <td>${usuario.cpf}</td>
+        <td>${usuario.email}</td>
+        <td>
+            <button onclick="excluirUsuario(${usuario.id}, '${usuario.primeiro_nome} ${usuario.ultimo_nome}')">Excluir</button>
+         
+        </td>
+    `;
+    tbody.appendChild(tr);
+});
+
+    // Substitui o conteúdo anterior pelo novo conteúdo da tabela
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = '';
+    resultado.appendChild(tabela);
+}
+
+// Função para excluir usuário
+async function excluirUsuario(id, nome) {
+    const confirmacao = confirm(`Deseja realmente excluir o usuário ${nome}?`);
+    if (confirmacao) {
+        try {
+            const response = await fetch(`http://127.0.0.1:5004/api/usuarios/${id}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                exibirMensagem(data.mensagem);
+                listarUsuarios(); // Atualiza a tabela após a exclusão
+            } else {
+                const data = await response.json();
+                exibirMensagem(`Erro: ${data.erro}`);
+            }
+        } catch (error) {
+            console.error('Erro ao excluir usuário:', error);
+            exibirMensagem('Erro inesperado ao excluir usuário');
+        }
+    }
+}
+
+
+
+
+    </script>
+</body>
+
+</html>
+
+
+<script>
+  async function listarUsuarios() {
+    const response = await fetch('http://127.0.0.1:5004/api/usuarios');
+    const data = await response.json();
+
+    // Criação da tabela
+    const tabela = document.createElement('table');
+    tabela.innerHTML = `
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-usuarios"></tbody>
+    `;
+
+    // Preenchimento da tabela com os dados
+    const tbody = tabela.querySelector('#tabela-usuarios');
+    data.forEach(usuario => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${usuario.id}</td>
+            <td>${usuario.primeiro_nome}</td>
+            <td>${usuario.ultimo_nome}</td>
+            <td>${usuario.cpf}</td>
+            <td>${usuario.email}</td>
+            <td>
+                <button onclick="excluirUsuario(${usuario.id}, '${usuario.primeiro_nome} ${usuario.ultimo_nome}')">Excluir</button>
+                
+            </td>
+        `;
+        tbody.appendChild(tr);
+    });
+
+    // Substitui o conteúdo anterior pelo novo conteúdo da tabela
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = '';
+    resultado.appendChild(tabela);
+}
+
+async function excluirUsuario(id, nome) {
+    const confirmacao = confirm(`Deseja realmente excluir o usuário ${nome}?`);
+    if (confirmacao) {
+        try {
+            const response = await fetch(`http://127.0.0.1:5004/api/usuarios/${id}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                exibirMensagem(data.mensagem);
+                listarUsuarios(); // Atualiza a tabela após a exclusão
+            } else {
+                const data = await response.json();
+                exibirMensagem(`Erro: ${data.erro}`);
+            }
+        } catch (error) {
+            console.error('Erro ao excluir usuário:', error);
+            exibirMensagem('Erro inesperado ao excluir usuário');
+        }
+    }
+}
+
+function exibirMensagem(mensagem) {
+    const mensagemElemento = document.getElementById('mensagem');
+    mensagemElemento.innerHTML = `<p>${mensagem}</p>`;
+}
+
+
+async function criarUsuario() {
+            try {
+                const response = await fetch('http://127.0.0.1:5004/api/usuarios', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        primeiro_nome: 'Novo',
+                        ultimo_nome: 'Usuário',
+                        cpf: '12345678901',
+                        senha: 'senha123',
+                        email: 'novo.usuario@example.com',
+                    }),
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    exibirMensagem(data.mensagem);
+                    listarUsuarios(); // Atualiza a tabela após a criação
+                } else {
+                    const data = await response.json();
+                    exibirMensagem(`Erro: ${data.erro}`);
+                }
+            } catch (error) {
+                console.error('Erro ao criar usuário:', error);
+                exibirMensagem('Erro inesperado ao criar usuário');
+            }
+        }
+
+      
+    </script>
+</body>
+
+</html>

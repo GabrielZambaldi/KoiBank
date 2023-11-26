@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id_usuario: document.querySelector('input[name="id_usuario"]').value,
         };
 
-        fetch('http://127.0.0.1:5000/cadastrar', {
+        fetch('http://127.0.0.1:5004/cadastrar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
