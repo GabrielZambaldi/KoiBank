@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             primeiroNome: document.querySelector('input[name="primeiroNome"]').value,
             ultimoNome: document.querySelector('input[name="ultimoNome"]').value,
             cpf: document.querySelector('input[name="cpf"]').value,
+            senha: document.querySelector('input[name="senha"]').value,
             email: document.querySelector('input[name="email"]').value,
             endereco: document.querySelector('input[name="endereco"]').value,
             bairro: document.querySelector('input[name="bairro"]').value,
@@ -16,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
             CEP: document.querySelector('input[name="CEP"]').value,
             areaCode: document.querySelector('input[name="areaCode"]').value,
             phoneNumber: document.querySelector('input[name="phoneNumber"]').value,
-            // Adicione outros campos do formulário conforme necessário
+            id_usuario: document.querySelector('input[name="id_usuario"]').value,
         };
 
-        fetch('http://127.0.0.1:5000/processar_formulario', {
+        fetch('http://127.0.0.1:5000/cadastrar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -28,20 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Resposta do backend:', data);
+            console.log(data);
             
-            // Lógica para lidar com a resposta do servidor
-            if (data.mensagem === 'Formulário recebido com sucesso!') {
-                // A operação foi bem-sucedida, você pode redirecionar o usuário para outra página, exibir uma mensagem de sucesso, etc.
+            // Adicione aqui a lógica para lidar com a resposta do back-end, se necessário
+            if (data.mensagem === 'Cadastro realizado com sucesso!') {
                 alert('Cadastro realizado com sucesso!');
-                window.location.href = './acesso/acesso.html';
-            } else {
-                // A operação falhou, você pode exibir uma mensagem de erro para o usuário ou tomar outras ações apropriadas.
-                alert('Erro ao processar o formulário. Por favor, tente novamente.');
+                // Ou exiba a mensagem em algum lugar na sua página
             }
         })
         .catch(error => {
-            console.error('Erro ao enviar para o backend:', error);
+            console.error('Erro:', error);
         });
     });
 });
+

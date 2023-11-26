@@ -18,7 +18,7 @@
     <main>
         <div id="logo2">
           <img src="./acesso/Img/LogoKoiBank.jpeg" alt="">
-        <p id="texto2">Você está à um passo de uma conta completa com cartão de crédito e taxa zero</p>
+        <p id="texto2">Você está a um passo de uma conta completa com cartão de crédito e taxa zero</p>
         </div>
             
         <div id="formulário">
@@ -27,8 +27,11 @@
                 <input type="text" placeholder="Primeiro nome" name="primeiroNome" required>
                 <input type="text" placeholder="Último nome" name="ultimoNome" required>
 
-                <p>CPF *</p>
+                <p>CPF  *</p>
                 <input type="text" placeholder="123.456.789-00" name="cpf" required>
+
+                <p>Senha *</p>
+                <input type="password" placeholder="12345678" name="senha" required>
 
                 <p>E-mail *</p>
                 <input type="email" placeholder="ex: email@yahoo.com" name="email" required>
@@ -46,6 +49,7 @@
                 <input type="text" placeholder="Código internacional" name="areaCode" required>
                 <input type="text" placeholder="DDD + Celular" name="phoneNumber" required>
                 <p>
+                    <input type="hidden" name="id_usuario" value="">
                     <input type="submit" id="enviar">
                 </p>
             </form>
@@ -70,45 +74,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
-    <script >
-        document.addEventListener('DOMContentLoaded', function() {
-            const formulario = document.getElementById('meuformulario');
-    
-            formulario.addEventListener('submit', function(event) {
-                event.preventDefault();
-    
-                const dadosDoFormulario = {
-                    primeiroNome: document.querySelector('input[name="primeiroNome"]').value,
-                    ultimoNome: document.querySelector('input[name="ultimoNome"]').value,
-                    cpf: document.querySelector('input[name="cpf"]').value,
-                    email: document.querySelector('input[name="email"]').value,
-                    endereco: document.querySelector('input[name="endereco"]').value,
-                    bairro: document.querySelector('input[name="bairro"]').value,
-                    numero: document.querySelector('input[name="numero"]').value,
-                    complemento: document.querySelector('input[name="complemento"]').value,
-                    CEP: document.querySelector('input[name="CEP"]').value,
-                    areaCode: document.querySelector('input[name="areaCode"]').value,
-                    phoneNumber: document.querySelector('input[name="phoneNumber"]').value,
-                    // Adicione outros campos do formulário conforme necessário
-                };
-    
-                fetch('http://127.0.0.1:5000/processar_formulario', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(dadosDoFormulario),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    // Adicione aqui a lógica para lidar com a resposta do back-end, se necessário
-                })
-                .catch(error => {
-                    console.error('Erro:', error);
-                });
-            });
-        });
-    </script>
 </body>
 </html>
+

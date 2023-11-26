@@ -121,6 +121,13 @@ main {
     text-decoration: none;
 }
 
+#excluir { 
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    
+    
+}
+
 #acessos1 {
     text-decoration: none;
     color: black;
@@ -172,8 +179,6 @@ main {
     }
 }
 
-css
-Copy code
 body {
     font-size: 16px; /* Defina um tamanho de fonte padrão no corpo do documento */
 }
@@ -189,3 +194,11 @@ header {
 footer {
     font-size: 0.75em; /* 0.75 vezes o tamanho padrão do corpo */
 }
+
+#mensagem-confirmacao {
+    background-color: #ffffff; /* Cor verde para indicar sucesso */
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
