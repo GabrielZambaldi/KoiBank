@@ -50,3 +50,47 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Lógica para processar o formulário de login
+    const formularioLogin = document.getElementById('meuLogin');
+
+    formularioLogin.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const dadosDoLogin = {
+            cpf: document.querySelector('input[name="cpf"]').value,
+            senha: document.querySelector('input[name="senha"]').value,
+        };
+
+        // Verificar se o CPF e a senha são "admin"
+        if (dadosDoLogin.cpf === 'admin' && dadosDoLogin.senha === 'admin') {
+            // Redirecionar para o arquivo adm.html
+            window.location.href = './acesso/adm.html';
+            return; // Parar a execução do código restante
+        }
+
+        // Se não for "admin", continuar com a solicitação para o backend
+        fetch('http://127.0.0.1:5004/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dadosDoLogin),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Resposta do backend (login):', data);
+
+            if (data.mensagem === 'Login bem-sucedido') {
+                alert('Login realizado com sucesso!');
+                // Adicione lógica adicional para o sucesso do login, se necessário
+            } else {
+                // Lógica para tratamento de falha de login
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao enviar para o backend (login):', error);
+        });
+    });
+});

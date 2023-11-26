@@ -46,14 +46,40 @@ async function listarUsuarios() {
     });
 }
 
-// Função para exibir detalhes do usuário
-async function detalhes(id) {
-    const response = await fetch(`http://127.0.0.1:5004/api/usuarios/detalhes/${id}`);
-    const data = await response.json();
+async function criarUsuario() {
+    console.log('Tentando criar usuário...');
 
-    // Exibir os detalhes sensíveis no console (não recomendado para informações sensíveis na prática)
-    console.log(data);
+    try {
+        const response = await fetch('http://127.0.0.1:5004/api/usuarios', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                primeiro_nome: 'Novo',
+                ultimo_nome: 'Usuário',
+                cpf: '1234567892',
+                senha: 'senha123',
+                email: 'novo.usuario@example.com',
+            }),
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log('Resposta do servidor:', data);
+            exibirMensagem(data.mensagem);
+            listarUsuarios(); // Atualiza a tabela após a criação
+        } else {
+            const data = await response.json();
+            console.log('Erro ao criar usuário:', data);
+            exibirMensagem(`Erro: ${data.erro}`);
+        }
+    } catch (error) {
+        console.error('Erro ao criar usuário:', error);
+        exibirMensagem('Erro inesperado ao criar usuário');
+    }
 }
+
 
 
 
