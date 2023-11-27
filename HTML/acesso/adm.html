@@ -85,7 +85,7 @@ function exibirMensagem(mensagem) {
 
 // Função para listar usuários
 async function listarUsuarios() {
-    const response = await fetch('http://127.0.0.1:5004/api/usuarios');
+    const response = await fetch('https://congenial-space-winner-7qg96rvw6vg2pvpv-5004.app.github.dev/api/usuarios');
     const data = await response.json();
 
     // Criação da tabela
@@ -133,7 +133,7 @@ async function excluirUsuario(id, nome) {
     const confirmacao = confirm(`Deseja realmente excluir o usuário ${nome}?`);
     if (confirmacao) {
         try {
-            const response = await fetch(`http://127.0.0.1:5004/api/usuarios/${id}`, {
+            const response = await fetch(`https://congenial-space-winner-7qg96rvw6vg2pvpv-5004.app.github.dev/api/usuarios/${id}`, {
                 method: 'DELETE',
             });
 
@@ -163,7 +163,7 @@ async function excluirUsuario(id, nome) {
 
 <script>
   async function listarUsuarios() {
-    const response = await fetch('http://127.0.0.1:5004/api/usuarios');
+    const response = await fetch('https://congenial-space-winner-7qg96rvw6vg2pvpv-5004.app.github.dev/api/usuarios');
     const data = await response.json();
 
     // Criação da tabela
@@ -210,7 +210,7 @@ async function excluirUsuario(id, nome) {
     const confirmacao = confirm(`Deseja realmente excluir o usuário ${nome}?`);
     if (confirmacao) {
         try {
-            const response = await fetch(`http://127.0.0.1:5004/api/usuarios/${id}`, {
+            const response = await fetch(`https://congenial-space-winner-7qg96rvw6vg2pvpv-5004.app.github.dev/api/usuarios/${id}`, {
                 method: 'DELETE',
             });
 
@@ -237,7 +237,7 @@ function exibirMensagem(mensagem) {
 
 async function criarUsuario() {
             try {
-                const response = await fetch('http://127.0.0.1:5004/api/usuarios', {
+                const response = await fetch('https://congenial-space-winner-7qg96rvw6vg2pvpv-5004.app.github.dev/api/usuarios', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

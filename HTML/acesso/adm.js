@@ -1,84 +1,66 @@
-async function excluirUsuarioConfirmacao(id, nome) {
-    const confirmacao = confirm(`Deseja realmente excluir o usuário ${nome}?`);
-    if (confirmacao) {
-        try {
-            const response = await fetch(`http://127.0.0.1:5004/api/usuarios/${id}`, {
-                method: 'DELETE',
-            });
+document.addEventListener('DOMContentLoaded', function () {
+    const formulario = document.getElementById('meuformulario');
 
-            if (response.ok) {
-                const data = await response.json();
-                document.getElementById('mensagem').innerHTML = `<p>${data.mensagem}</p>`;
-                listarUsuarios(); // Atualiza a tabela após a exclusão
-            } else {
-                const data = await response.json();
-                document.getElementById('mensagem').innerHTML = `<p>Erro: ${data.erro}</p>`;
-            }
-        } catch (error) {
-            console.error('Erro ao excluir usuário:', error);
-            document.getElementById('mensagem').innerHTML = '<p>Erro inesperado ao excluir usuário</p>';
-        }
-    }
-}
+    // Adicione um campo oculto ao formulário para identificar a origem
+    const origemInput = document.createElement('input');
+    origemInput.type = 'hidden';
+    origemInput.name = 'origem';
+    origemInput.value = 'adm';
+    formulario.appendChild(origemInput);
 
-// Função para listar usuários
-async function listarUsuarios() {
-    const response = await fetch('http://127.0.0.1:5004/api/usuarios');
-    const data = await response.json();
+    formulario.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    const tabelaUsuarios = document.getElementById('tabela-usuarios');
-    tabelaUsuarios.innerHTML = ''; // Limpar a tabela antes de adicionar novos dados
+        const gerarCPF = document.getElementById('gerarCPF').checked;
+        const gerarSenha = document.getElementById('gerarSenha').checked;
 
-    data.forEach(usuario => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-            <td>${usuario.id}</td>
-            <td>${usuario.primeiro_nome}</td>
-            <td>${usuario.ultimo_nome}</td>
-            <td>${usuario.cpf}</td>
-            <td>${usuario.email}</td>
-            <td>
-                <button onclick="excluirUsuarioConfirmacao(${usuario.id}, '${usuario.primeiro_nome} ${usuario.ultimo_nome}')">Excluir</button>
-                <button onclick="detalhes(${usuario.id})">Detalhes</button>
-            </td>
-        `;
-        tabelaUsuarios.appendChild(tr);
-    });
-}
+        const dadosDoFormulario = {
+            primeiroNome: document.querySelector('input[name="primeiroNome"]').value,
+            ultimoNome: document.querySelector('input[name="ultimoNome"]').value,
+            email: document.querySelector('input[name="email"]').value,
+            // ... outros campos
 
-async function criarUsuario() {
-    console.log('Tentando criar usuário...');
+            // Gera CPF aleatório apenas quando necessário
+            cpf: gerarCPF ? gerarCpfAleatorio() : document.querySelector('input[name="cpf"]').value,
+            // Gera senha aleatória apenas quando necessário e se a origem for 'adm'
+            senha: gerarSenha && origemInput.value === 'adm' ? gerarSenhaAleatoria() : document.querySelector('input[name="senha"]').value,
+        };
 
-    try {
-        const response = await fetch('http://127.0.0.1:5004/api/usuarios', {
+        fetch('https://congenial-space-winner-7qg96rvw6vg2pvpv-5004.app.github.dev/cadastrar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                primeiro_nome: 'Novo',
-                ultimo_nome: 'Usuário',
-                cpf: '1234567892',
-                senha: 'senha123',
-                email: 'novo.usuario@example.com',
-            }),
-        });
+            body: JSON.stringify(dadosDoFormulario),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
 
-        if (response.ok) {
-            const data = await response.json();
-            console.log('Resposta do servidor:', data);
-            exibirMensagem(data.mensagem);
-            listarUsuarios(); // Atualiza a tabela após a criação
-        } else {
-            const data = await response.json();
-            console.log('Erro ao criar usuário:', data);
-            exibirMensagem(`Erro: ${data.erro}`);
-        }
-    } catch (error) {
-        console.error('Erro ao criar usuário:', error);
-        exibirMensagem('Erro inesperado ao criar usuário');
+                // Adicione aqui a lógica para lidar com a resposta do back-end, se necessário
+                if (data.mensagem === 'Cadastro realizado com sucesso!') {
+                    alert('Cadastro realizado com sucesso!');
+                    // Ou exiba a mensagem em algum lugar na sua página
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+    });
+
+    // Função para gerar CPF aleatório
+    function gerarCpfAleatorio() {
+        // Lógica para gerar CPF aleatório usando a biblioteca faker ou outra abordagem de sua escolha
+        // Exemplo com faker:
+        return faker.br.cpf();
     }
-}
+
+    // Função para gerar senha aleatória
+    function gerarSenhaAleatoria() {
+        // Lógica para gerar senha aleatória, você pode usar a mesma lógica que mencionei anteriormente
+        return Math.random().toString(36).slice(-8);
+    }
+});
 
 
 

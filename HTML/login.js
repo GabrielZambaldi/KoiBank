@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             senha: document.querySelector('input[name="senha"]').value,
         };
 
-        fetch('http://127.0.0.1:5004/login', {
+        fetch('https://congenial-space-winner-7qg96rvw6vg2pvpv-5004.app.github.dev/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const idUsuario = data.id_usuario;
 
                 // Exemplo de uma requisição para obter mensagens personalizadas
-                fetch(`http://127.0.0.1:5004/mensagens/${idUsuario}`)
+                fetch(`https://congenial-space-winner-7qg96rvw6vg2pvpv-5004.app.github.dev/mensagens/${idUsuario}`)
                     .then(response => response.json())
                     .then(data => {
                         if ('mensagem_personalizada' in data) {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Se não for "admin", continuar com a solicitação para o backend
-        fetch('http://127.0.0.1:5004/login', {
+        fetch('https://congenial-space-winner-7qg96rvw6vg2pvpv-5004.app.github.dev/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
