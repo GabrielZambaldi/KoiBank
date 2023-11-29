@@ -9,7 +9,7 @@
 # SOBRE O PROJETO:
 
 ## Nosso projeto é um banco digital, onde temos cadastros de clientes, programas de benefícios, consultoria, rendimentos, e investimentos.
-#### O projeto está sendo feito utilizando as linguagens padrão: HTML5, CSS e Javascript, sendo adaptável para qualquer tela sendo computador, notebook, ou celulares.
+#### O projeto está sendo feito utilizando as linguagens padrão: HTML5, CSS e Javascript, python sendo adaptável para qualquer tela sendo computador, notebook, ou celulares.
 #### Na pasta index.html se encontra os códigos da página de apresentação do nosso projeto KoiBank;
 
 ## Dentro da pasta HTML: 
