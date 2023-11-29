@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
 
         const dadosDoFormulario = {
-            primeiroNome: formulario.elements['primeiroNome'].value,
-            ultimoNome: formulario.elements['ultimoNome'].value,
+            primeiro_nome: formulario.elements['primeiroNome'].value,
+            ultimo_nome: formulario.elements['ultimoNome'].value,
             cpf: formulario.elements['cpf'].value,
             senha: formulario.elements['senha'].value,
             email: formulario.elements['email'].value,
@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Adicione aqui a lógica para lidar com a resposta do back-end, se necessário
             if (data.mensagem === 'Cadastro realizado com sucesso!') {
                 alert('Cadastro realizado com sucesso!');
+                
                 // Ou exiba a mensagem em algum lugar na sua página
             }
         })
