@@ -5,8 +5,6 @@
     <!-- Link para o arquivo CSS gerado a partir do SCSS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
-  
-
     <title>KoiBank</title>
 </head>
 <body>
@@ -29,17 +27,33 @@
             <li><a id="acesso6"  href="#">Financiamentos</a></li>
         </ol>
         <p><a id="sair" href="/HTML/Login.html">SAIR DA CONTA</a></p>
-        <p><a id="excluir" href="/HTML/Login.html">Excluir Conta</a></p>
-
-
+        <p><a id="excluir" href="#" onclick="confirmarExclusao()">Excluir Conta</a></p>
+        
+        
     </div>
 
     <div id="cartão-crédito">
-       
         <img id="credit-card" src="./Img/Cartão.jpeg" alt="#">
-        
         <a id="botao" class="botão">PEÇA JÁ O SEU CARTÃO</a>
     </div>
+    <form id="formularioEdicao">
+        <label for="primeiro_nome">Primeiro Nome:</label>
+        <input type="text" id="primeiro_nome" name="primeiro_nome">
+    
+        <label for="ultimo_nome">Último Nome:</label>
+        <input type="text" id="ultimo_nome" name="ultimo_nome">
+    
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf">
+    
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="senha">Senha:</label>
+        <input type="senha" id="senha" name="senha">
+    
+        <button type="button" onclick="enviarFormularioEdicao()">Salvar Alterações</button>
+    </form>
 </main> 
 <footer id="rodapé">
     <div id="links">
@@ -59,11 +73,6 @@
     </div>
 </footer>
 <script src="/HTML/acesso/acesso.js"></script>
-<script>
-    function confirmarExclusao() {
-        // Lógica para confirmar a exclusão
-    }
-</script>
 
 </body>
 </html>
