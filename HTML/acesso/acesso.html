@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles.css">
     <!-- Link para o arquivo CSS gerado a partir do SCSS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
     <title>KoiBank</title>
 </head>
 <body>
+    <header>
+        <div id="título">
+            Bem Vindo
+        </div>
+        <div id="botão-acessar">
+            <a href="./Tema.html" class="inicio">PÁGINA INICIAL</a>
+        </div>
+    
+    </header>
+    <main>
+        <div id="logo2">
+          <img src="./Img/LogoKoiBank.jpeg" alt="">
+        <p id="texto2">Minha Conta</p>
+        </div>
 
-<header>
-    <div id="primeiro">
-        <h1> Bem-vindo</h1> <!--titulo do site-->
-        <p>KoiBank o seu banco digital</p>
-    </div>
-</header>
 
-<main>
-    <div id="acessosinternos">
-        <ol>
-            <li><a id="acessos1" href="#">Saldo da conta</a></li>
-            <li><a id="acesso2"  href="#">Depósito da conta</a></li>
-            <li><a id="acesso3"  href="#">Faça pagamentos</a></li>
-            <li><a id="acesso4"  href="#">Cartões da conta</a></li>
-            <li><a id="acesso5"  href="#">Seguros</a></li>
-            <li><a id="acesso6"  href="#">Financiamentos</a></li>
-        </ol>
-        <p><a id="sair" href="/HTML/Login.html">SAIR DA CONTA</a></p>
-        <p><a id="excluir" href="#" onclick="confirmarExclusao()">Excluir Conta</a></p>
-        
-        
-    </div>
 
-    <div id="cartão-crédito">
-        <img id="credit-card" src="./Img/Cartão.jpeg" alt="#">
-        <a id="botao" class="botão">PEÇA JÁ O SEU CARTÃO</a>
-    </div>
+<div id="formulário">
+</ol>
+    <li><a id="acessos1" href="#">Saldo da conta</a></li>
+    <li><a id="acesso2"  href="#">Depósito</a></li>
+    <li><a id="acesso3"  href="#">Pagamentos</a></li>
+    <li><a id="acesso4"  href="#">Cartões</a></li>
+    <li><a id="acesso5"  href="#">Seguros</a></li>
+    <li><a id="acesso6"  href="#">Financiamentos</a></li>
+</ol>
+
+    
+
     <form id="formularioEdicao">
+        <p> Alterar Dados Cadastrados </p>
         <label for="primeiro_nome">Primeiro Nome:</label>
         <input type="text" id="primeiro_nome" name="primeiro_nome">
     
@@ -52,25 +54,32 @@
         <label for="senha">Senha:</label>
         <input type="senha" id="senha" name="senha">
     
-        <button type="button" onclick="enviarFormularioEdicao()">Salvar Alterações</button>
+        <button id="botão-abrir-conta" class="botão" onclick="enviarFormularioEdicao()">Salvar Alterações</button>
     </form>
-</main> 
+    <p><a id="botão-abrir-conta" href="../Login.html" class="botão" onclick="confirmarExclusao()">Sair da Conta</a></p>
+    <p><a id="botão-abrir-conta" href="../Login.html" class="botão" >Excluir Conta</a></p>
+    
+
+
+</div>
+</main>
+
 <footer id="rodapé">
-    <div id="links">
-        <p>
-            <a id="links5" href="#">Trabalhe conosco</a>
-            | 
-            <a id="links2" href="/HTML/Koibank.html">Sobre nós</a>
-            | 
-            <a id="links3" href="#" >LGPD</a>
-            |
-            <a id="links4" href="#">Fale conosco</a>
-        </p>
-    </div>
-    <div id="infos">
-        <p>© 2023 BANCO KOI S.A. CNPJ: 00.000.000/0001-00</p>
-        <p>Av. Das Carpas, 3186 - Vila Toquio, São Paulo - 13000-000</p>
-    </div>
+<div id="links">
+    <p>
+        <a id="links5" href="#">Trabalhe conosco</a>
+        | 
+        <a id="links2" href="./Koibank.html">Sobre nós</a>
+        | 
+        <a id="links3" href="#" >LGPD</a>
+        |
+        <a id="links4" href="#">Fale conosco</a>
+    </p>
+</div>
+<div id="infos">
+    <p>© 2023 BANCO KOI S.A. CNPJ: 00.000.000/0001-00</p>
+    <p>Av. Das Carpas, 3186 - Vila Toquio, São Paulo - 13000-000</p>
+</div>
 </footer>
 <script src="/HTML/acesso/acesso.js"></script>
 
